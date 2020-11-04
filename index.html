@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+
+    <link rel="stylesheet" href="resetCss.css">
+    <link rel="stylesheet" href="estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Instagram</title>
+  </head>
+  <body>
+    <main>
+
+      <div class="celular">
+        <img src="./img/fundo-celular-01.jpg" alt="imagem celular" class="imagem-celular celular-visivel">
+        <img src="./img/fundo-celular-02.jpg" alt="imagem celular" class="imagem-celular">
+        <img src="./img/fundo-celular-03.jpg" alt="imagem celular" class="imagem-celular">
+
+        <!-- <img src="./img/celular.png" alt="celular"> -->
+
+
+      </div>
+
+      <div class="entrar-instagram">
+        <div class="bloco2">
+          <img src="./img/logo2.png" alt="logo do instagram" id="logo">
+          <img src="./img/usuario.png" alt="imagem usuario" id="usuario">
+          <a href="#" class="continuar">Continuar como maykisantos97</a>
+          <span class="trocar-conta">
+            <p>Não é maykisantos97?
+              <a href="#" class="destaque-azul">Trocar de conta</a>
+            </p>
+          </span>
+
+        </div>
+      </div>
+
+    </main>
+
+
+
+    <footer>
+      <section class="links-externos">
+        <ul>
+          <li><a href="#">SOBRE</a></li>
+          <li><a href="#">AJUDA</a></li>
+          <li><a href="#">IMPRENSA</a></li>
+          <li><a href="#">API</a></li>
+          <li><a href="#">CARREIRAS</a></li>
+          <li><a href="#">PRIVACIDADE</a></li>
+          <li><a href="#">TERMOS</a></li>
+          <li><a href="#">LOCALIZAÇÕES</a></li>
+          <li><a href="#">CANAIS DE ATENDIMENTO</a></li>
+          <li><a href="#">HASHTAGS</a></li>
+          <li><a href="#">IDIOMA</a></li>
+        </ul>
+      </section>
+      <section class="copyright">
+        <p>© 2020 INSTAGRAM DO FACEBOOK</p>
+      </section>
+
+    </footer>
+
+    <script>
+      var imagens = document.querySelectorAll('.imagem-celular');
+      console.log(imagens);
+      var anterior = 0
+
+      setInterval(function() {
+        var indice = Math.floor(Math.random() * (3-0) + 0);
+
+        imagens[anterior].classList.remove("celular-visivel");
+        imagens[indice].classList.toggle("celular-visivel");
+
+        anterior = indice;
+      }, 5000);
+    </script>
+  </body>
+</html>
